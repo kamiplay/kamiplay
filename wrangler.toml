@@ -18,8 +18,6 @@ binding = "ASSETS"
 # VITE_NORMAL_ROUTER = "true"
 # VITE_PWA_ENABLED = "false"
 # VITE_DISALLOWED_IDS = ""
-# VITE_ALLOW_FEBBOX_KEY = "true"
-# VITE_ALLOW_REAL_DEBRID_KEY = "true"
 
 [env.preview]
 workers_dev = true
