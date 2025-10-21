@@ -1,6 +1,8 @@
 # KamiPlay
 [![KamiPlay Image](.github/kamiplay.png)](https://docs.pstream.mov)  
 
+> **KamiPlay** is a fork of [P-Stream](https://github.com/p-stream/p-stream) - An anime-inspired streaming platform with enhanced UI and custom branding.
+
 **I *do not* endorse piracy of any kind I simply enjoy programming and large user counts.**
 
 
@@ -38,8 +40,8 @@
 ## Running Locally
 Type the following commands into your terminal / command line to run KamiPlay locally
 ```bash
-git clone https://github.com/p-stream/p-stream.git
-cd smov
+git clone https://github.com/kamiplay/kamiplay.git
+cd kamiplay
 git pull
 pnpm install
 pnpm run dev
