@@ -149,7 +149,16 @@ function App() {
             }
           />
           <Route path="/browse/:query?" element={<HomePage />} />
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={
+              import.meta.env.VITE_DEFAULT_ROUTE ? (
+                <Navigate to={import.meta.env.VITE_DEFAULT_ROUTE} replace />
+              ) : (
+                <HomePage />
+              )
+            }
+          />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
