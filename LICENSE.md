@@ -1,6 +1,7 @@
 MIT License
 
 Copyright (c) 2021 James Hawkins
+
 Copyright (c) 2025 Kavin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
