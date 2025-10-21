@@ -43,6 +43,7 @@ export function HeroPart({
   const { t: randomT } = useRandomTranslation();
   const [search, setSearch, setSearchUnFocus] = searchParams;
   const [showBg, setShowBg] = useState(false);
+  const [quote, setQuote] = useState<string | null>(null);
   const bannerSize = useBannerSize();
 
   const stickStateChanged = useCallback(
@@ -86,6 +87,49 @@ export function HeroPart({
   const inputRef = useRef<HTMLInputElement>(null);
   useSlashFocus(inputRef);
 
+  // Curated anime/life quotes (EN) to show on the welcome page
+  useEffect(() => {
+    const quotes: string[] = [
+      // One Piece
+      "If you don’t take risks, you can’t create a future. — Monkey D. Luffy (One Piece)",
+      "No matter how deep the night, it always turns to day, eventually. — Brook (One Piece)",
+
+      // Fullmetal Alchemist
+      "A lesson without pain is meaningless. — Edward Elric (Fullmetal Alchemist)",
+      "The world isn’t perfect... that’s what makes it so damn beautiful. — Roy Mustang (Fullmetal Alchemist)",
+
+      // Naruto
+      "If you don’t like your destiny, don’t accept it. Have the courage to change it. — Naruto Uzumaki (Naruto)",
+      "People’s lives don’t end when they die, it ends when they lose faith. — Itachi Uchiha (Naruto)",
+
+      // Attack on Titan
+      "If you begin to regret, you’ll dull your future decisions. — Erwin Smith (Attack on Titan)",
+      "People, who can’t throw something important away, can never hope to change anything. — Armin Arlert (Attack on Titan)",
+
+      // Gurren Lagann
+      "Believe in the you who believes in yourself. — Kamina (Gurren Lagann)",
+
+      // Cowboy Bebop
+      "I’m not going there to die. I’m going there to find out if I’m really alive. — Spike Spiegel (Cowboy Bebop)",
+
+      // Rurouni Kenshin
+      "Whatever you lose, you’ll find it again. But what you throw away you’ll never get back. — Kenshin Himura (Rurouni Kenshin)",
+
+      // Fate/Zero
+      "Whatever you do, enjoy it to the fullest. That is the secret of life. — Rider/Iskandar (Fate/Zero)",
+
+      // Code Geass
+      "If the king doesn’t move, then his subjects won’t follow. — Lelouch Lamperouge (Code Geass)",
+
+      // Gintama
+      "The past is the past, and the future is the future. — Gintoki Sakata (Gintama)",
+
+      // Studio Ghibli (Movie)
+      "We each need to find our own inspiration. — Ursula (Kiki’s Delivery Service)",
+    ];
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+  }, []);
+
   return (
     <ThinContainer>
       <div
@@ -96,7 +140,14 @@ export function HeroPart({
       >
         {showTitle && (!isTV || search.length === 0) ? (
           <div className="relative z-10 mb-16">
-            <HeroTitle className="mx-auto max-w-md">{title}</HeroTitle>
+            <HeroTitle className="mx-auto max-w-md bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-white">
+              {title}
+            </HeroTitle>
+            {quote ? (
+              <p className="mt-4 text-sm text-type-dimmed italic max-w-xl mx-auto">
+                {quote}
+              </p>
+            ) : null}
           </div>
         ) : null}
 

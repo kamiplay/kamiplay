@@ -1,4 +1,4 @@
-name = "p-stream"
+name = "kamiplay"
 main = "worker/index.ts"
 compatibility_date = "2024-10-21"
 workers_dev = true
@@ -27,7 +27,7 @@ workers_dev = true
 
 # Uncomment and adjust the routes below once your zone is ready
 # [[routes]]
-# pattern = "p-stream.example.com/*"
+# pattern = "kamiplay.example.com/*"
 # zone_name = "example.com"
 
 [observability]

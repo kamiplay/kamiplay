@@ -1,6 +1,6 @@
 {
   "packageManager": "pnpm@9.14.4",
-  "name": "P-Stream",
+  "name": "kamiplay",
   "version": "5.2.0",
   "private": true,
   "homepage": "https://github.com/p-stream/p-stream",

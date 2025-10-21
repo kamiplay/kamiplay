@@ -1,14 +1,14 @@
-# P-Stream
-[![P-Stream Image](.github/P-Stream.png)](https://docs.pstream.mov)  
+# KamiPlay
+[![KamiPlay Image](.github/kamiplay.png)](https://docs.pstream.mov)  
 
 **I *do not* endorse piracy of any kind I simply enjoy programming and large user counts.**
 
 
 ## Quick Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fp-stream%2Fp-stream)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkamiplay%2Fkamiplay)
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/p-stream/p-stream)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/kamiplay/kamiplay)
 
 **NOTE: To self-host, more setup is required. Check the [docs](https://docs.pstream.mov) to properly set up!!!!**
 
@@ -36,7 +36,7 @@
 
 
 ## Running Locally
-Type the following commands into your terminal / command line to run P-Stream locally
+Type the following commands into your terminal / command line to run KamiPlay locally
 ```bash
 git clone https://github.com/p-stream/p-stream.git
 cd smov
@@ -47,8 +47,8 @@ pnpm run dev
 Then you can visit the local instance [here](http://localhost:5173) or, at local host on port 5173.
 
 
-## Updating a P-Stream Instance
-To update a P-Stream instance you can type the below commands into a terminal at the root of your project.
+## Updating a KamiPlay Instance
+To update a KamiPlay instance you can type the below commands into a terminal at the root of your project.
 ```bash
 git remote add upstream https://github.com/p-stream/p-stream.git
 git fetch upstream # Grab the contents of the new remote source
@@ -56,10 +56,10 @@ git checkout <YOUR_MAIN_BRANCH>  # Most likely this would be `origin/production`
 git merge upstream/production
 # * Fix any conflicts present during merge *
 git add .  # Add all changes made during merge and conflict fixing
-git commit -m "Update p-stream instance (merge upstream/production)"
+git commit -m "Update KamiPlay instance (merge upstream/production)"
 git push  # Push to YOUR repository
 ```
 
 
 ## Contact Me / Discord
-[Discord](https://discord.gg/7z6znYgrTG)
+[Discord](https://discord.gg/WbaQAwD8sT)
