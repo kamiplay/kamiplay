@@ -1,0 +1,36 @@
+name = "p-stream"
+main = "worker/index.ts"
+compatibility_date = "2024-10-21"
+workers_dev = true
+
+[build]
+command = "pnpm run build"
+
+[assets]
+directory = "./dist"
+
+# Environment variables can be set here or in the Cloudflare dashboard
+[vars]
+# VITE_APP_DOMAIN = "https://your-domain.com"
+# VITE_BACKEND_URL = "https://backend.your-domain.com"
+# VITE_OPENSEARCH_ENABLED = "false"
+# VITE_NORMAL_ROUTER = "true"
+# VITE_PWA_ENABLED = "false"
+# VITE_DISALLOWED_IDS = ""
+
+[env.preview]
+workers_dev = true
+
+[env.preview.vars]
+# Override preview-specific environment variables here
+
+# Uncomment and adjust the routes below once your zone is ready
+# [[routes]]
+# pattern = "p-stream.example.com/*"
+# zone_name = "example.com"
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true

@@ -12,6 +12,9 @@
     "update-providers": "pnpm update @p-stream/providers",
     "test": "vitest run",
     "preview": "vite preview",
+    "preview:cf": "pnpm run build && wrangler dev --local --persist-to=.wrangler/state",
+    "deploy:cf": "wrangler deploy",
+    "deploy:cf:preview": "wrangler deploy --env preview",
     "lint": "eslint --ext .tsx,.ts src",
     "lint:fix": "eslint --fix --ext .tsx,.ts src",
     "lint:report": "eslint --ext .tsx,.ts --output-file eslint_report.json --format json src",
@@ -83,6 +86,7 @@
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-typescript": "^7.27.1",
+  "@cloudflare/workers-types": "^4.20241018.0",
     "@rollup/wasm-node": "^4.52.4",
     "@types/chromecast-caf-sender": "^1.0.11",
     "@types/crypto-js": "^4.2.2",
@@ -136,7 +140,8 @@
     "vite-plugin-pwa": "^0.17.5",
     "vite-plugin-static-copy": "^1.0.6",
     "vitest": "^1.6.1",
-    "workbox-window": "^7.3.0"
+    "workbox-window": "^7.3.0",
+    "wrangler": "^3.95.0"
   },
   "pnpm": {
     "overrides": {
